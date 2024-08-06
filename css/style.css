@@ -115,6 +115,23 @@ button:hover {
   background-color: #555;
 }
 
+.sign-in{
+  margin-left: auto;
+}
+.sign-in a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color: #555;
+  border-radius: 4px;
+}
+sign-in a:hover{
+  background-color: #777;
+  color: white;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
