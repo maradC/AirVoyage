@@ -23,7 +23,11 @@
 </head>
 
 <body>
+
 <nav class="navbar">
+  <div class="logo">
+    <a href="#home"><img src="img/airplane.png" alt="Logo"></a>
+  </div>
   <ul class="nav-list">
     <li><a href="#book">BOOK</a></li>
     <li><a href="#checkin">CHECK-IN</a></li>
@@ -34,6 +38,21 @@
     <li><a href="#needhelp">Need Help</a></li>
   </ul>
 </nav>
+
+<!--Creating the flight search section-->
+<div class = "form container">
+  <form id = "flight-search-form">
+    <div class = "form_group">
+      <label for="departure-airport">Departure Airport: </label>
+      <input type=" text" id="departure-airport"name="departure-airport" required>
+    </div>
+    <div class = "form_group">
+      <label for="arrival-airport">Arrival Airport: </label>
+      <input type=" text" id="arrival-airport"name="departure-airport" required>
+    </div>
+  </form>
+</div>
+
 
   <!-- Add your site or application content here -->
 

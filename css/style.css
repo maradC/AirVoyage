@@ -21,9 +21,25 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .navbar {
   background-color: #333;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  margin-right: auto; /* Pushes the logo to the left */
+}
+
+.logo img {
+  height: 40px; /* Adjust the height as needed */
 }
 
 .nav-list {
@@ -31,7 +47,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around; /* Adjusts space between items */
+  justify-content: space-around;
+  flex-grow: 1;
 }
 
 .nav-list li {
@@ -50,6 +67,7 @@ body {
   background-color: #ddd;
   color: black;
 }
+
 
 
 /*
