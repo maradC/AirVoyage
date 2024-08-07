@@ -21,6 +21,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.tab-container {
+  margin-bottom: 20px;
+}
+.tabs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+}
+.tab {
+  margin-right: 20px;
+}
+
+
 .body {
   margin: 0;
   font-family: Arial, sans-serif;
