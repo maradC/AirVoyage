@@ -49,6 +49,22 @@ body {
   border-color: #007BFF;
   border-bottom: 2px solid #fff;
 }
+.form-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form_group {
+  margin-bottom: 15px;
+}
+
+.form_group label {
+  display: block;
+  margin-bottom: 5px;
+}
 
 .body {
   margin: 0;
