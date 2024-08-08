@@ -22,24 +22,43 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-.flex-container{
-  width:100%;
+.flex-container {
+  width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row-reverse;
-
+  flex-direction: row;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-wrap: wrap; /* Allow wrapping to create a grid */
 }
-.flex-box{
+
+.flex-box {
   width: 200px;
-  height: 200px;
-  background: linear-gradient(purple,red);
-  color: white;
-  font-size: 25px;
+  height: auto; /* Allow the height to adjust based on content */
+  background: white; /* Changed to white */
+  color: black; /* Changed text color to black */
+  font-size: 16px; /* Adjust font size for better fit */
   text-align: center;
-  line-height: 200px;
+  padding: 20px; /* Add padding for better spacing */
   border-radius: 20px;
   margin: 10px;
+  border: 2px solid black; /* Added a black outline */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.flex-box h4 {
+  margin: 0; /* Remove default margin */
+  font-size: 18px; /* Adjust font size */
+}
+
+.flex-box p {
+  margin: 5px 0 0; /* Adjust margin to create space between elements */
+  font-size: 14px; /* Smaller font size for the paragraph */
+}
+
 
 .flatpickr-calendar {
   border: 1px solid #ccc; /* Border around the calendar */
