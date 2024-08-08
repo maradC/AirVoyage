@@ -11,7 +11,17 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-h/* Flatpickr custom styles */
+/* Existing styles */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 .flatpickr-calendar {
   border: 1px solid #ccc; /* Border around the calendar */
   border-radius: 5px; /* Rounded corners */
@@ -51,18 +61,6 @@ h/* Flatpickr custom styles */
 
 .flatpickr-calendar.inline {
   border-radius: 5px; /* Rounded corners for inline calendar */
-}
-
-/* Existing styles */
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 .tab-container {
