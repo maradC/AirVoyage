@@ -38,8 +38,8 @@
     <li><a href="#needhelp">Need Help</a></li>
   </ul>
 
-  <div class ="sign-in">
-      <a href="#signin">Sign In</a>
+  <div class="sign-in">
+    <a href="#signin">Sign In</a>
   </div>
 </nav>
 
@@ -52,35 +52,41 @@
   </ul>
 </div>
 
-<!--Creating the flight search section-->
-<div class = "form container">
-  <form id = "flight-search-form">
-    <div class = "form_group">
-      <label for="departure-airport">Departure Airport: </label>
-      <input type=" text" id="departure-airport"name="departure-airport" required>
+<!-- Creating the flight search section -->
+<div class="form container">
+  <form id="flight-search-form">
+    <div class="form_group">
+      <label for="departure-airport">Departure Airport:</label>
+      <input type="text" id="departure-airport" name="departure-airport" required>
     </div>
-    <div class = "form_group">
-      <label for="arrival-airport">Arrival Airport: </label>
-      <input type=" text" id="arrival-airport"name="departure-airport" required>
+    <div class="form_group">
+      <label for="arrival-airport">Arrival Airport:</label>
+      <input type="text" id="arrival-airport" name="arrival-airport" required>
     </div>
-    <div class = "form_group">
-      <label for="departure-date">Departure Date: </label>
-      <input type="date" id="departure-date"name="departure-airport" required>
+    <div class="form_group">
+      <label for="date-range">Travel Dates:</label>
+      <input type="text" id="date-range" name="date-range" placeholder="Select dates" required>
     </div>
-    <div class = "form_group">
-      <label for="return-date">Return Date: </label>
-      <input type="date" id="return-date"name="departure-airport" required>
-    </div>
-    <button type="submit">Search Flights</button>
-
+    <button type="submit">Find Flights</button>
   </form>
 </div>
 
+<!-- Include Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-  <!-- Add your site or application content here -->
+<!-- Include Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-  <p> </p>
-  <script src="js/app.js"></script>
+<!-- Initialize Flatpickr -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    flatpickr("#date-range", {
+      mode: "range",
+      dateFormat: "Y-m-d", // Adjust the format as needed
+      minDate: "today", // Optional: Prevent selecting past dates
+    });
+  });
+</script>
 
 </body>
 
