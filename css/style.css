@@ -22,6 +22,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 .flatpickr-calendar {
   border: 1px solid #ccc; /* Border around the calendar */
   border-radius: 5px; /* Rounded corners */
