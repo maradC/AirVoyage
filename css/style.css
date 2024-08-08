@@ -47,18 +47,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Ellipsis for overflowing text */
 }
 
-.flex-box h4 {
-  margin: 0; /* Remove default margin */
-  font-size: 18px; /* Adjust font size */
+
+.flex-box b {
+  font-size: 16px; /* Slightly larger font for bold text */
+  margin-bottom: 5px; /* Space between title and text */
 }
 
 .flex-box p {
-  margin: 5px 0 0; /* Adjust margin to create space between elements */
-  font-size: 14px; /* Smaller font size for the paragraph */
+  margin: 0;
+  font-size: 12px; /* Smaller font size for the paragraph */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Ellipsis for overflowing text */
+  white-space: normal; /* Allow text to wrap */
+  line-height: 1.2em; /* Adjust line height for better fit */
 }
-
 
 .flatpickr-calendar {
   border: 1px solid #ccc; /* Border around the calendar */
