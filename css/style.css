@@ -137,13 +137,16 @@ button:hover {
   height: 100vh;
   background-color: #f4f4f4;
 }
-#flight-search-form{
-  background-color: #fff;
-  padding: 20px;
-  border-radius:  8px;
-  box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1);
-  width:  300px;
+#flight-search-form {
+  background-color: #fff; /* Background color of the form */
+  padding: 20px; /* Padding inside the form */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  width: 600px; /* Increase the width for a rectangular shape */
+  height: 400px; /* Set a height to make it more rectangular */
+  box-sizing: border-box; /* Ensures padding is included in width/height */
 }
+
 .form-group{
   margin-bottom: 15px;
 }
