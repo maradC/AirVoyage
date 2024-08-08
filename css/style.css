@@ -11,11 +11,55 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+h/* Flatpickr custom styles */
+.flatpickr-calendar {
+  border: 1px solid #ccc; /* Border around the calendar */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.flatpickr-month {
+  background-color: #007BFF; /* Background color for the month header */
+  color: #fff; /* Text color for the month header */
+}
+
+.flatpickr-day {
+  background-color: #fff; /* Background color for each day cell */
+  color: #222; /* Text color for each day cell */
+}
+
+.flatpickr-day:hover {
+  background-color: #007BFF; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.flatpickr-day.selected {
+  background-color: #0056b3; /* Background color for selected date */
+  color: #fff; /* Text color for selected date */
+}
+
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background-color: #0056b3; /* Background color for start and end dates in range */
+  color: #fff; /* Text color for start and end dates in range */
+}
+
+.flatpickr-day.inRange {
+  background-color: #007BFF; /* Background color for dates within the selected range */
+  color: #fff; /* Text color for dates within the selected range */
+}
+
+.flatpickr-calendar.inline {
+  border-radius: 5px; /* Rounded corners for inline calendar */
+}
+
+/* Existing styles */
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -24,15 +68,18 @@ body {
 .tab-container {
   margin-bottom: 20px;
 }
+
 .tabs {
   list-style: none;
   padding: 0;
   display: flex;
   border-bottom: 2px solid #ccc;
 }
+
 .tab {
   margin-right: 20px;
 }
+
 .tab a {
   text-decoration: none;
   color: #000;
@@ -49,6 +96,7 @@ body {
   border-color: #007BFF;
   border-bottom: 2px solid #fff;
 }
+
 .form-container {
   padding: 20px;
   border: 1px solid #ccc;
@@ -65,6 +113,7 @@ body {
   display: block;
   margin-bottom: 5px;
 }
+
 .form_group input {
   width: 100%;
   padding: 8px;
@@ -81,11 +130,6 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-.body {
-  margin: 0;
-  font-family: Arial, sans-serif;
 }
 
 .navbar {
@@ -130,13 +174,14 @@ button:hover {
   color: black;
 }
 
-.form-contianer{
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f4f4f4;
 }
+
 #flight-search-form {
   background-color: #fff; /* Background color of the form */
   padding: 20px; /* Padding inside the form */
@@ -147,22 +192,23 @@ button:hover {
   box-sizing: border-box; /* Ensures padding is included in width/height */
 }
 
-.form-group{
+.form-group {
   margin-bottom: 15px;
 }
-label{
-  display:block;
-  margin-bottom:5px;
+
+label {
+  display: block;
+  margin-bottom: 5px;
   font-weight: bold;
 }
+
 input[type="text"],
-input[type = "date"]{
+input[type="date"] {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
-
 }
 
 button {
@@ -180,9 +226,10 @@ button:hover {
   background-color: #555;
 }
 
-.sign-in{
+.sign-in {
   margin-left: auto;
 }
+
 .sign-in a {
   display: block;
   color: #f2f2f2;
@@ -192,10 +239,12 @@ button:hover {
   background-color: #555;
   border-radius: 4px;
 }
-sign-in a:hover{
+
+.sign-in a:hover {
   background-color: #777;
   color: white;
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
