@@ -225,8 +225,7 @@ button:hover {
 }
 
 #flight-search-form {
-  background-image: url("");
-  background-color: #fff; /* Background color of the form */
+  background-color: #ffffff; /* Background color of the form */
   padding: 20px; /* Padding inside the form */
   border-radius: 8px; /* Optional: Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
