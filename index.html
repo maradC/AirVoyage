@@ -98,6 +98,7 @@
 
 
 
+  <script src="js/app.js"></script>
 
 
 
@@ -116,7 +117,10 @@
       minDate: "today", // Optional: Prevent selecting past dates
     });
   })
-  document.getElementById("sign-in")
+  document.getElementById("sign-in").addEventListener("click", function (event) {
+    event.preventDefault()
+
+  }
 </script>
 
 </body>
