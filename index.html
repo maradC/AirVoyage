@@ -136,8 +136,30 @@
   }
 
   document.getElementById("signInForm").addEventListener("submit",function(event)){
-    event.preventDefault()
-  }
+    event.preventDefault();
+    const username = document.getElementById("Username:").value;
+    const password = document.getElementById("Password:").value;
+
+    console.log("Username:", username);
+    console.log("Password:", password);
+
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        // Redirect or show success message
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Show error message
+      });
+  });
 </script>
 
 </body>
