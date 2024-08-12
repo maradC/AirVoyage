@@ -1,5 +1,5 @@
 <!doctype html>
- <html class="no-js" lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,6 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
-
 </head>
 
 <body>
@@ -40,9 +39,9 @@
   </ul>
 
   <div class="sign-in">
-    <a href="#signin">Sign In</a>
+    <a href="#signin" id="sign-in">Sign In</a>
     <form id="signInForm">
-      <label for="username">Username :</label>
+      <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">Password:</label>
@@ -63,14 +62,14 @@
 </div>
 
 <!-- Creating the flight search section -->
-<div class="form container">
+<div class="form-container">
   <form id="flight-search-form">
     <div class="form_group">
       <label for="departure-airport">Departure Airport:</label>
       <input type="text" id="departure-airport" name="departure-airport" required>
     </div>
 
-    <button type ="button" id="swap-airports" aria-label="swap-airports">Swap</button>
+    <button type="button" id="swap-airports" aria-label="swap-airports">Swap</button>
 
     <div class="form_group">
       <label for="arrival-airport">Arrival Airport:</label>
@@ -84,34 +83,30 @@
     <button type="submit">Find Flights</button>
   </form>
 </div>
-<h2>What AirVoyage Brings to the Table.</h2>
+<h2>What AirVoyage Brings to the Table</h2>
 
-
-<div class = "flex-container">
-  <div class = "flex-box">
+<div class="flex-container">
+  <div class="flex-box">
     <b>Big names, Great Deals</b>
     Search 100's of travel sites to compare prices
   </div>
-  <div class = "flex-box">
+  <div class="flex-box">
     <b>Filter for what you want</b>
     Free Wi-Fi? Early arrival? Instantly customize your results.
   </div>
-  <div class = "flex-box">
+  <div class="flex-box">
     <b>Track prices</b>
     Not ready to book? Set alerts for when prices drop
   </div>
-<div class = "flex-box">
-  <b>More than flights</b>
-  Find deals for your entire trip from hotels to rental cars
+  <div class="flex-box">
+    <b>More than flights</b>
+    Find deals for your entire trip from hotels to rental cars
+  </div>
 </div>
 
+<script src="js/app.js"></script>
 
-
-  <script src="js/app.js"></script>
-
-
-
-    <!-- Include Flatpickr CSS -->
+<!-- Include Flatpickr CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 <!-- Include Flatpickr JS -->
@@ -119,46 +114,47 @@
 
 <!-- Initialize Flatpickr -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     flatpickr("#date-range", {
       mode: "range",
-      dateFormat: "Y-m-d", // Adjust the format as needed
-      minDate: "today", // Optional: Prevent selecting past dates
+      dateFormat: "Y-m-d",
+      minDate: "today",
     });
-  })
-  document.getElementById("sign-in").addEventListener("click", function (event) {
-    event.preventDefault()
 
-    openSignInModel();
-  });
-  function openSigninModel(){
-    alert("Sign-in functionally to be added here")
-  }
+    document.getElementById("sign-in").addEventListener("click", function (event) {
+      event.preventDefault();
+      openSignInModal();
+    });
 
-  document.getElementById("signInForm").addEventListener("submit",function(event)){
-    event.preventDefault();
-    const username = document.getElementById("Username:").value;
-    const password = document.getElementById("Password:").value;
+    function openSignInModal() {
+      alert("Sign-in functionality to be added here.");
+    }
 
-    console.log("Username:", username);
-    console.log("Password:", password);
+    document.getElementById("signInForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-    fetch('/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-        // Redirect or show success message
+      console.log("Username:", username);
+      console.log("Password:", password);
+
+      fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
       })
-      .catch((error) => {
-        console.error('Error:', error);
-        // Show error message
-      });
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          // Redirect or show success message
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          // Show error message
+        });
+    });
   });
 </script>
 
