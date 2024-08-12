@@ -42,7 +42,7 @@
   <div class="sign-in">
     <a href="#signin">Sign In</a>
     <form id="signInForm">
-      <label for="username">Username:</label>
+      <label for="username">Username :</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">Password:</label>
@@ -133,6 +133,10 @@
   });
   function openSigninModel(){
     alert("Sign-in functionally to be added here")
+  }
+
+  document.getElementById("signInForm").addEventListener("submit",function(event)){
+    event.preventDefault()
   }
 </script>
 
