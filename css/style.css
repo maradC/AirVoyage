@@ -217,21 +217,21 @@ button:hover {
 }
 
 .form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: block; /* Change display from flex to block */
+  width: 600px; /* Keep the desired width */
+  padding: 20px; /* Keep padding */
+  margin: 50px auto; /* Center horizontally but add top margin */
   background-color: #f4f4f4;
 }
 
 #flight-search-form {
-  background-color: #ffffff; /* Background color of the form */
-  padding: 20px; /* Padding inside the form */
-  border-radius: 8px; /* Optional: Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-  width: 600px; /* Increase the width for a rectangular shape */
-  height: 400px; /* Set a height to make it more rectangular */
-  box-sizing: border-box; /* Ensures padding is included in width/height */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto; /* Adjust to fit content */
+  box-sizing: border-box;
 }
 
 .form-group {
@@ -299,7 +299,6 @@ button:hover {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 
 .modal-content {
   background-color: #fefefe;
