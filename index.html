@@ -218,6 +218,22 @@
     signInModal.style.display = "none";
     signUpModal.style.display = "block";
   }
+  // When the user clicks on <span> (x), close the modal
+  for (let closeButton of closeButtons) {
+    closeButton.onclick = function() {
+      signInModal.style.display = "none";
+      signUpModal.style.display = "none";
+    }
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == signInModal) {
+      signInModal.style.display = "none";
+    } else if (event.target == signUpModal) {
+      signUpModal.style.display = "none";
+    }
+  }
 </script>
 
 </body>
