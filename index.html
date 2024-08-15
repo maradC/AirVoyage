@@ -204,6 +204,20 @@
   });
 
   // Sign up
+  var signInModal = document.getElementById("signInModal");
+  var signUpModal = document.getElementById("signUpModal");
+
+  // Get the link that opens the sign-up modal
+  var signUpLink = document.getElementById("signUpLink");
+
+  // Get the <span> element that closes the modals
+  var closeButtons = document.getElementsByClassName("close");
+
+  // When the user clicks the Sign Up link, close the sign-in modal and open the sign-up modal
+  signUpLink.onclick = function() {
+    signInModal.style.display = "none";
+    signUpModal.style.display = "block";
+  }
 </script>
 
 </body>
