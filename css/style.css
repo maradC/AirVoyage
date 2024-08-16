@@ -355,6 +355,10 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
+#map {
+  height: 400px;
+  width: 100%;
+}
 
 
 /*
