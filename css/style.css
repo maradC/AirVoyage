@@ -45,7 +45,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   margin: 10px;
-  border: 2px solid #FF6600; /* Orange border */
+  border: 2px solid #007BFF; /* Blue border */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +76,7 @@ body {
 }
 
 .flatpickr-month {
-  background-color: #FF6600; /* Orange background for the month header */
+  background-color: #007BFF; /* Blue background for the month header */
   color: #fff; /* White text */
 }
 
@@ -86,23 +86,23 @@ body {
 }
 
 .flatpickr-day:hover {
-  background-color: #FF6600; /* Orange background on hover */
+  background-color: #007BFF; /* Blue background on hover */
   color: #fff;
 }
 
 .flatpickr-day.selected {
-  background-color: #e65c00; /* Darker orange for selected date */
+  background-color: #0056b3; /* Darker blue for selected date */
   color: #fff;
 }
 
 .flatpickr-day.startRange,
 .flatpickr-day.endRange {
-  background-color: #e65c00; /* Darker orange for range start/end */
+  background-color: #0056b3; /* Darker blue for range start/end */
   color: #fff;
 }
 
 .flatpickr-day.inRange {
-  background-color: #FF6600; /* Orange for dates within the selected range */
+  background-color: #007BFF; /* Blue for dates within the selected range */
   color: #fff;
 }
 
@@ -137,9 +137,9 @@ body {
 
 .tab.active a,
 .tab a:hover {
-  background-color: #FF6600; /* Orange background for active and hover states */
+  background-color: #007BFF; /* Blue background for active and hover states */
   color: #fff;
-  border-color: #FF6600;
+  border-color: #007BFF;
   border-bottom: 2px solid #fff;
 }
 
@@ -168,7 +168,7 @@ body {
 
 /* Button Styles */
 button {
-  background-color: #FF6600; /* Orange background for buttons */
+  background-color: #007BFF; /* Blue background for buttons */
   color: #fff; /* White text */
   border: none;
   padding: 10px 20px;
@@ -176,12 +176,12 @@ button {
 }
 
 button:hover {
-  background-color: #e65c00; /* Darker orange on hover */
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: #FF6600; /* Orange background for navbar */
+  background-color: #007BFF; /* Blue background for navbar */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -218,7 +218,7 @@ button:hover {
 }
 
 .nav-list a:hover {
-  background-color: #e65c00; /* Darker orange on hover */
+  background-color: #0056b3; /* Darker blue on hover */
   color: #fff; /* White text on hover */
 }
 
@@ -239,15 +239,31 @@ button:hover {
   background-color: #fff; /* White background */
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #FF6600; /* Orange border */
+  border: 1px solid #007BFF; /* Blue border */
   width: 80%;
   max-width: 400px;
 }
 
 .close {
-  color: #FF6600; /* Orange close button */
+  color: #007BFF; /* Blue close button */
   float: right;
-  fo
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #0056b3; /* Darker blue on hover/focus */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Map Styles */
+#map {
+  height: 400px;
+  width: 100%;
+  border: 2px solid #007BFF; /* Blue border around the map */
+}
 
 
 /*
