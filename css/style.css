@@ -221,6 +221,22 @@ button:hover {
   background-color: #00297a; /* Slightly darker blue on hover */
   color: #fff; /* White text on hover */
 }
+.sign-in a {
+  display: block;
+  color: #0039a6; /* Dark blue text color */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color: #fff; /* White background */
+  border-radius: 4px;
+  border: 2px solid #0039a6; /* Dark blue border */
+}
+
+.sign-in a:hover {
+  background-color: #0039a6; /* Dark blue background on hover */
+  color: #fff; /* White text on hover */
+}
+
 
 /* Modal Styles */
 .modal {
