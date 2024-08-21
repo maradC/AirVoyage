@@ -20,6 +20,9 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+
+  <!-- Include Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -57,7 +60,7 @@
 
       <button type="submit">Sign In</button>
     </form>
-    <p>Dont have an account? <a href="#" id="signUpLink">Sign Up</a></p>
+    <p>Don't have an account? <a href="#" id="signUpLink">Sign Up</a></p>
   </div>
 </div>
 
@@ -66,7 +69,6 @@
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2>Sign Up</h2>
-    <!-- Sign-up form -->
     <form>
       <div class="form-group">
         <label for="new-username">Username:</label>
@@ -85,8 +87,6 @@
   </div>
 </div>
 
-
-
 <div class="tab-container">
   <ul class="tabs">
     <li class="tab"><a href="#hotels">Hotels</a></li>
@@ -96,7 +96,6 @@
   </ul>
 </div>
 
-<!-- Creating the flight search section -->
 <div class="form-container">
   <form id="flight-search-form">
     <div class="form_group">
@@ -140,24 +139,15 @@
   </div>
 </div>
 
-<!--Google Maps--->
-<script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKvP17fInbO1wKvAADP6bPO_m5Qdq3V9A&callback=initMap">
-</script>
-
-<div id = "map" style="height: 400px; width: 100%;"></div>
-
-
-
-<script src="js/app.js"></script>
-
-<!-- Include Flatpickr CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<div id="map" style="height: 400px; width: 100%;"></div>
 
 <!-- Include Flatpickr JS -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-<!-- Initialize Flatpickr -->
+<!-- Include Google Maps JS API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+<!-- Main JS -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     flatpickr("#date-range", {
@@ -166,93 +156,50 @@
       minDate: "today",
     });
 
-    // Sign-in
-    var modal = document.getElementById("signInModal");
+    // Sign-in Modal
+    var signInModal = document.getElementById("signInModal");
+    var signUpModal = document.getElementById("signUpModal");
     var btn = document.getElementById("sign-in");
-    var span = document.getElementsByClassName("close")[0];
+    var signUpLink = document.getElementById("signUpLink");
+    var closeButtons = document.getElementsByClassName("close");
 
-    btn.onclick = function() {
-      modal.style.display = "block";
+    btn.onclick = function () {
+      signInModal.style.display = "block";
+    };
+
+    signUpLink.onclick = function () {
+      signInModal.style.display = "none";
+      signUpModal.style.display = "block";
+    };
+
+    for (let closeButton of closeButtons) {
+      closeButton.onclick = function () {
+        signInModal.style.display = "none";
+        signUpModal.style.display = "none";
+      };
     }
 
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    window.onclick = function (event) {
+      if (event.target == signInModal) {
+        signInModal.style.display = "none";
+      } else if (event.target == signUpModal) {
+        signUpModal.style.display = "none";
       }
-    }
-
-    document.getElementById("signInForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-
-      console.log("Username:", username);
-      console.log("Password:", password);
-
-      fetch('/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-          // Redirect or show success message
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-          // Show error message
-        });
-    });
+    };
   });
 
-  // Sign up
-  var signInModal = document.getElementById("signInModal");
-  var signUpModal = document.getElementById("signUpModal");
-
-  // Get the link that opens the sign-up modal
-  var signUpLink = document.getElementById("signUpLink");
-
-  // Get the <span> element that closes the modals
-  var closeButtons = document.getElementsByClassName("close");
-
-  // When the user clicks the Sign Up link, close the sign-in modal and open the sign-up modal
-  signUpLink.onclick = function() {
-    signInModal.style.display = "none";
-    signUpModal.style.display = "block";
-  }
-  // When the user clicks on <span> (x), close the modal
-  for (let closeButton of closeButtons) {
-    closeButton.onclick = function() {
-      signInModal.style.display = "none";
-      signUpModal.style.display = "none";
-    }
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == signInModal) {
-      signInModal.style.display = "none";
-    } else if (event.target == signUpModal) {
-      signUpModal.style.display = "none";
-    }
-  }
-  // Google Map Implementation
-  function initMap(){
-    var location = {lat: -34.397, lng: 150.644 };
-    var map = new google.maps.Map(document.getElementById("map")){
+  // Google Map Initialization
+  function initMap() {
+    var location = { lat: -34.397, lng: 150.644 };
+    var map = new google.maps.Map(document.getElementById("map"), {
       zoom: 8,
-        center: location
-    }
-    var marker = new google.maps.Marker({ position: location, map: map });
-  });
-
+      center: location,
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
 </script>
 
 </body>
