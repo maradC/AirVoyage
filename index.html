@@ -189,17 +189,26 @@
   });
 
   // Google Map Initialization
-  function initMap() {
-    var location = { lat: -34.397, lng: 150.644 };
-    var map = new google.maps.Map(document.getElementById("map"), {
+  async function initMap() {
+    // Fetch the API key from the backend
+    const response = await fetch('/api-key');
+    const data = await response.json();
+
+    // Create and append the Google Maps script tag
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${data.apiKey}&callback=loadMap`;
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  function loadMap() {
+    // Initialize the map
+    const map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: -34.397, lng: 150.644 },
       zoom: 8,
-      center: location,
-    });
-    var marker = new google.maps.Marker({
-      position: location,
-      map: map,
     });
   }
+  window.onload = initMap;
 </script>
 
 </body>
