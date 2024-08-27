@@ -367,9 +367,9 @@ Check-in
 /* Check-in section with grey background */
 /* Breadcrumb container */
 .breadcrumb-container {
-  background-color: #f8f8f8; /* Light grey background */
+  background-color: #e1e0dd; /* Light grey background */
   padding: 10px 20px;       /* Padding for vertical spacing */
-  border-bottom: 1px solid #ddd; /* Bottom border for separation */
+  border-bottom: 1px solid #e1e0dd; /* Bottom border for separation */
 }
 
 .breadcrumb {
@@ -405,9 +405,9 @@ Check-in
 
 /* Check-in container */
 .check-in-container {
-  background-color: #e0e0e0; /* Light grey background */
+  background-color: #e1e0dd; /* Light grey background */
   padding: 40px 20px;        /* Padding for spacing */
-  text-align: center;        /* Center the content */
+  text-align: left;        /* Center the content */
 }
 
 .check-in-container h2 {
