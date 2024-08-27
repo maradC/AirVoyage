@@ -347,7 +347,7 @@ Check-in
 .top-bar {
   background-color: #0039a6; /* Dark grey background */
   padding: 10px 0;        /* Vertical padding */
-  text-align: center;     /* Center the text */
+  text-align: left;     /* Center the text */
 }
 
 .site-name {
@@ -355,25 +355,67 @@ Check-in
   font-size: 24px;        /* Font size for the website name */
   text-decoration: none;  /* Remove underline from link */
   font-weight: bold;      /* Bold text */
+  padding-left: 20px;     /* Indent the text from the left */
+  display: inline-block;  /* Keep the element inline and allow padding */
 }
+
 
 .site-name:hover {
   color: #ffcc00;         /* Change color on hover */
 }
 
 /* Check-in section with grey background */
-.check-in-section {
-  background-color: #e0e0e0; /* Light grey background */
-  padding: 40px 20px;        /* Padding for the section */
-  text-align: center;        /* Center the content */
-  margin: 0;                 /* Remove any default margin */
+/* Breadcrumb container */
+.breadcrumb-container {
+  background-color: #f8f8f8; /* Light grey background */
+  padding: 10px 20px;       /* Padding for vertical spacing */
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
 }
 
-.check-in-section h1 {
-  margin-bottom: 0;          /* Remove default margin */
-  font-size: 32px;           /* Font size for H1 */
-  color: #333;               /* Dark grey text */
+.breadcrumb {
+  margin: 0;
+  padding: 0;
 }
+
+.breadcrumb ul {
+  list-style: none;         /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  display: flex;            /* Flexbox for horizontal layout */
+  align-items: center;      /* Vertically center items */
+}
+
+.breadcrumb li {
+  color: #666;              /* Light grey text */
+  margin-right: 8px;        /* Space between items */
+}
+
+.breadcrumb a {
+  color: #007bff;           /* Link color */
+  text-decoration: none;    /* Remove underline */
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.breadcrumb span {
+  color: #333;              /* Dark grey text for the current page */
+}
+
+/* Check-in container */
+.check-in-container {
+  background-color: #e0e0e0; /* Light grey background */
+  padding: 40px 20px;        /* Padding for spacing */
+  text-align: center;        /* Center the content */
+}
+
+.check-in-container h2 {
+  font-size: 32px;           /* Font size for H2 */
+  color: #333;               /* Dark grey text */
+  margin: 0;                 /* Remove default margin */
+}
+
 
 
 
