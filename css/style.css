@@ -413,6 +413,29 @@ Check-in
   line-height: 1.5;
   color: #333;
 }
+/* Check-in message */
+.check-in-message{
+  background-color: #f0f8ff; /* Light blue background to make it stand out */
+  border: 1px solid #d1d1d1; /* Light gray border for subtle definition */
+  border-radius: 8px;         /* Rounded corners for a smooth look */
+  padding: 20px;              /* Padding inside the container for spacing */
+  text-align: center;         /* Center-align the text */
+  max-width: 500px;           /* Maximum width for the container */
+  margin: 20px auto;          /* Center the container horizontally with auto margins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.check-in-message h1 {
+  font-size: 2rem;           /* Increase font size for h1 */
+  color: #0039a6;            /* Dark blue color (matches your preferred color theme) */
+  margin-bottom: 10px;       /* Space between h1 and h4 */
+}
+
+/* Styles for the h4 subheading */
+.check-in-message h4 {
+  font-size: 1.2rem;         /* Slightly smaller font size for h4 */
+  color: #666;               /* Dark gray color for subheading */
+  margin-top: 0;             /* Remove default margin above h4 */
+}
 
 .check-in-form-container {
   padding: 40px;
