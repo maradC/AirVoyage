@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8">
@@ -139,17 +139,15 @@
   </div>
 </div>
 
-<div id="map" style="height: 400px; width: 100%;"></div>
+<img src="img/image-background.jpg" alt="vacay" style="width: 1000px; height: 700px;">
 
 <!-- Include Flatpickr JS -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-<!-- Include Google Maps JS API -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
-
 <!-- Main JS -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Initialize Flatpickr on the travel date input
     flatpickr("#date-range", {
       mode: "range",
       dateFormat: "Y-m-d",
@@ -188,27 +186,6 @@
     };
   });
 
-  // Google Map Initialization
-  async function initMap() {
-    // Fetch the API key from the backend
-    const response = await fetch('/api-key');
-    const data = await response.json();
-
-    // Create and append the Google Maps script tag
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${data.apiKey}&callback=loadMap`;
-    script.async = true;
-    document.head.appendChild(script);
-  }
-
-  function loadMap() {
-    // Initialize the map
-    const map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
-    });
-  }
-  window.onload = initMap;
 </script>
 
 </body>

@@ -333,13 +333,6 @@ button:hover {
 }
 
 
-/* Map Styles */
-#map {
-  height: 400px;
-  width: 100%;
-  border: 2px solid #0039a6; /* Dark blue border around the map */
-}
-
 /*
 Check-in
  */
