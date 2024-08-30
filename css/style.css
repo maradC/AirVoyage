@@ -413,29 +413,37 @@ Check-in
   line-height: 1.5;
   color: #333;
 }
-/* Check-in message */
-.check-in-message{
-  background-color: #f0f8ff; /* Light blue background to make it stand out */
-  border: 1px solid #d1d1d1; /* Light gray border for subtle definition */
-  border-radius: 8px;         /* Rounded corners for a smooth look */
-  padding: 20px;              /* Padding inside the container for spacing */
-  text-align: center;         /* Center-align the text */
-  max-width: 500px;           /* Maximum width for the container */
-  margin: 20px auto;          /* Center the container horizontally with auto margins */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-.check-in-message h1 {
-  font-size: 2rem;           /* Increase font size for h1 */
-  color: #0039a6;            /* Dark blue color (matches your preferred color theme) */
-  margin-bottom: 10px;       /* Space between h1 and h4 */
+/* Container styles */
+.check-in-message {
+  text-align: center;          /* Center-align the text */
+  margin: 20px auto;           /* Center the container horizontally with auto margins */
+  max-width: 600px;
+  /* Maximum width for readability on larger screens */
 }
 
-/* Styles for the h4 subheading */
-.check-in-message h4 {
-  font-size: 1.2rem;         /* Slightly smaller font size for h4 */
-  color: #666;               /* Dark gray color for subheading */
-  margin-top: 0;             /* Remove default margin above h4 */
+/* Heading 1 styles */
+.check-in-message h1 {
+  font-size: 2rem;             /* Larger font size for main heading */
+  color: #0039a6;              /* Dark blue color for the main heading */
+  margin-bottom: 5px;          /* Small space below the h1 */
 }
+
+/* Heading 4 styles */
+.check-in-message h4 {
+  font-size: 1.2rem;           /* Slightly smaller font size for subheading */
+  color: #666;                 /* Dark gray color for subheading */
+  margin-top: 0;               /* Remove default margin above h4 */
+}
+
+/* Styles for the separator line */
+.separator-line {
+  border: none;                /* Remove default border */
+  border-top: 2px solid #d1d1d1; /* Add a solid line with a light gray color */
+  margin: 20px auto;           /* Space around the line */
+  width: 80%;                  /* Set line width to be less than the container width */
+  max-width: 600px;            /* Match max-width with container for consistency */
+}
+
 
 .check-in-form-container {
   padding: 40px;
