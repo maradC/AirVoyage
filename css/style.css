@@ -408,6 +408,11 @@ Check-in
   color: #333;               /* Dark grey text */
   margin: 0;                 /* Remove default margin */
 }
+.text-description{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
 
 
 
